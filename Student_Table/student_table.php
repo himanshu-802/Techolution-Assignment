@@ -112,13 +112,7 @@
             </div>
          </div>
       </section>
-      <footer>
-         <div class="footer_style text-white text-center container-fluid">
-            <p>
-               copyright by Himanshu Rathore
-            </p>
-         </div>
-      </footer>
+     
    </body>
 </html>
 

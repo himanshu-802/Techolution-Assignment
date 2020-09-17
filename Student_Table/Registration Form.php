@@ -1,74 +1,65 @@
-
-
 <!DOCTYPE html>
 <html>
-   <head>
-      <link rel="stylesheet" type="text/css" href="form_style.css">
-      
-      <script type="text/javascript">
-         function validate(){
-           var letters =  /^[A-Za-z]+$/;
-           var var1=document.myForm.firstname.value;
-           
-           if(! var1.match(letters) || var1.length()>21 ){
-              alert( "(accepts only alphabets a-zA-Z, max character size:20)" );
-              console.log("firstname");
-              document.myForm.firstname.focus() ;
-              return false;
-           }
-         
-            var var2=document.myForm.lastname.value;
-           
-           if(! var2.match(letters) || var2.length()>21 ){
-              alert( "(accepts only alphabets a-zA-Z, max character size:20)" );
-              console.log("lastname");
-              document.myForm.lastname.focus() ;
-              return false;
-           }
-         
-           var var3= document.myForm.yop.value;
-           var numbers = /^[0-9]+$/;
-           if(!var3.match(numbers) || var3>2016){
-             alert( "accepts only numbers and  should be less than 2017");
-             console.log("yop");
-              document.myForm.yop.focus() ;
-              return false;
-           }
-         
-           var var4= document.myForm.percentage.value;
-           if(!var4.match(numbers))
-           {
-             alert("accepts only numbers");
-             document.myForm.percentage.focus();
-             return false;
-           }
-         
-          return true();
-         
-         }
-      </script>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-   </head>
-   <body>
-      <div class="container">
-         <center>
-            <h1> Student Admission Form</h1>
-         </center>
-         <hr>
-         <form name="myForm" onsubmit="return(validate());">
-            <label> Firstname </label> 
-            <input type="text" name="firstname" placeholder= "Firstname" size="20" required /> 
-            <label> Lastname: </label>  
-            <input type="text" name="lastname" placeholder="Lastname" size="20"required /> 
-            <label> Class: </label>  
-            <input type="text" name="class" placeholder="Class" size="15"required />  
-            <label> Year of Passing: </label>  
-            <input type="text" name="yop" placeholder="Year of Passing" size="15"required />  
-            <label> Percentage: </label>  
-            <input type="text" name="percentage" placeholder="Percentage" size="15"required /> 
-            <button type="submit" value="Submit"class="registerbtn">Register</button>
-      </div>
-      </form>
-   </body>
-</html>
+<head>
+	<?php
+         include 'Links/links.php';
+         ?>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width">
+	<title>
+		Registration form
+	</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="form-validation.js"></script>
+</head>
 
+<body  onload="document.registration.first.focus();">
+<form name ='registration' onsubmit="return formValidation()">
+        <div class="container">
+            <div class="inner">
+
+                <div class="title">
+                    <h3>Registration Form</h3>
+                </div>
+                      
+                <div class="content">
+                    <div class="txt">
+                        <input type="text" id="txtfirst" name="first" placeholder="First Name" required="">
+                        <span id="c1" class="glyphicon glyphicon-user"></span>
+                    </div>
+                       
+                    <div class="txt">
+                        <input type="text" id="txtlast" name="last" placeholder="Last Name" required>
+                        <span id="c2" class="glyphicon glyphicon-envelope"></span>
+                    </div>
+                    
+                    <div class="txt">
+                        <input type="text" id="txtclass" name="class" placeholder="Class"required>
+                        <span id="c3" class="glyphicon glyphicon-lock"></span>
+                    </div>
+                
+                    <div class="txt">
+                        <input type="text" id="txtyop" name="yop" placeholder="Year of Passing" required>
+                        <span id="c4" class="glyphicon glyphicon-lock"></span>
+                    </div>
+                    
+
+                    <div class="txt">
+                        <input type="text" id="txtpercentage" name="percentage" placeholder="Percentage" required>
+                        <span id="c4" class="glyphicon glyphicon-lock"></span>
+                    </div>
+                    
+                </div>
+                
+                <div class="btnsub">
+                    <input type="submit" name="submit" id="btnsub" value="Submit">
+                </div>
+            </div> 
+
+        </div>      
+    </form>
+
+
+
+</body>
+</html>
