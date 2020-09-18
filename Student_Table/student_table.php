@@ -9,7 +9,7 @@
          ?>
       <script type="text/javascript">
          function func(){
-                $.getJSON("stud.json",
+                $.getJSON("Links/stud.json",
                        
                        function(data){
          
@@ -66,7 +66,7 @@
          
                         for(j=0;j<4;j++)
                         {
-                        tbval.rows[row_num].cells[j].style.color="#008000";
+                        tbval.rows[row_num].cells[j].style.color="#27AE60";
                         }
                         tbval.rows[row_num].cells[3].innerHTML='Topper';
          
@@ -101,7 +101,7 @@
          <div class="mb-3">
             <h3 class="text-uppercase  text-center">Students Result Board</h3>
             <div class=" table-responsive">
-               <table class=" table table-bordered table-stripped text-center " id="tbval">
+               <table class=" table table-bordered text-center " id="tbval" style="">
                   <tr>
                      <th>Student Name</th>
                      <th>Roll Number</th>

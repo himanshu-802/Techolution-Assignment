@@ -9,7 +9,7 @@
 	<title>
 		Registration form
 	</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="CSS/style_form.css">
 	<script src="form-validation.js"></script>
 </head>
 

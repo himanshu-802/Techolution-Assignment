@@ -8,12 +8,12 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   font-family: 'Muli', sans-serif;
+   
    }
    .main_header{
    height: 200px;
    width: 80%;
-   }
+ 2 }
    .rightside h1{
    font-size: 3rem;
    }
@@ -23,9 +23,15 @@
    h3{
    font-style: bold;
    }
-   table{
+   table,td,tr,th{
    border-collapse: collapse;
-   border: 1px solid black;
+   }
+   th{
+      font-size: 20px;
+   }
+   td{
+      font-style: bold;
+      font-size: 20px;
    }
    .leftside img{
    animation: heartbeat 20s linear infinite;
@@ -50,11 +56,6 @@
    transform: scale(1);
    }
    }
-   .footer_style{
-   background-color: #a29bfe!important;
-   }
-   .footer_Style p{
-   margin-bottom: 0!important;
-   }
+   
 </style>
 
